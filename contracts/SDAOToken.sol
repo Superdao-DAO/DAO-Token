@@ -1,6 +1,6 @@
 pragma solidity ^0.5.0;
 
-import '@openzeppelin/contracts/token/ERC777/ERC777.sol';
+import './openzeppelin_v2_4_0/token/ERC777/ERC777.sol';
 
 contract SDAOToken is ERC777 {
     string constant NAME    = 'SuperDAO Token';

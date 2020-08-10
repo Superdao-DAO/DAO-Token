@@ -1,15 +1,14 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.6.0;
 
-import './openzeppelin_v2_5_0/token/ERC20/ERC20.sol';
-import './openzeppelin_v2_5_0/token/ERC20/ERC20Detailed.sol';
+import './openzeppelin_v3_1_0/token/ERC20/ERC20.sol';
 
-contract SDAOToken is ERC20, ERC20Detailed {
-    string constant NAME    = 'SuperDAO Token';
+contract SDAOToken is ERC20{
+    string constant NAME    = 'SuperDAO';
     string constant SYMBOL  = 'SDAO';
     uint8 constant DECIMALS  = 18;
     uint256 constant TOTAL_SUPPLY = 100_000_000 * 10**uint256(DECIMALS);
 
-    constructor() ERC20Detailed(NAME, SYMBOL, DECIMALS) public {
+    constructor() ERC20(NAME, SYMBOL) public {
         _mint(msg.sender, TOTAL_SUPPLY);
     }
 }

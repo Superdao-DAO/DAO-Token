@@ -1,8 +1,10 @@
+// SPDX-License-Identifier: GPL-3.0-only
 pragma solidity ^0.6.0;
 
 import './openzeppelin_v3_1_0/token/ERC20/ERC20.sol';
+import './openzeppelin_v3_1_0/access/Ownable.sol';
 
-contract SDAOToken is ERC20{
+contract SDAOToken is Ownable, ERC20 {
     string constant NAME    = 'SuperDAO';
     string constant SYMBOL  = 'SDAO';
     uint8 constant DECIMALS  = 18;
